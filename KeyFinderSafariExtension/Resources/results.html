@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyFinder - Findings</title>
+  <link rel="stylesheet" href="css/results.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <img src="icons/icon48.png" alt="KeyFinder" class="header-icon">
+      <h1>KeyFinder <span class="version">v2.0</span></h1>
+    </div>
+    <div class="header-actions">
+      <div class="filter-group">
+        <select id="severityFilter">
+          <option value="all">All Severities</option>
+          <option value="critical">Critical</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <select id="typeFilter">
+          <option value="all">All Types</option>
+        </select>
+        <select id="providerFilter">
+          <option value="all">All Providers</option>
+        </select>
+        <select id="kindFilter">
+          <option value="all">All Secret Kinds</option>
+          <option value="api-key">API Keys</option>
+          <option value="token">Tokens</option>
+          <option value="credential">Credentials</option>
+          <option value="connection-string">Connection Strings</option>
+          <option value="private-key">Private Keys</option>
+          <option value="webhook">Webhooks</option>
+          <option value="storage">Storage & Cookies</option>
+        </select>
+        <input type="text" id="searchBox" placeholder="Search findings...">
+      </div>
+      <div class="btn-group">
+        <button id="refreshBtn" class="btn btn-secondary">Refresh</button>
+        <button id="resetHiddenBtn" class="btn btn-secondary">Show Hidden</button>
+        <button id="exportJsonBtn" class="btn btn-secondary">Export JSON</button>
+        <button id="exportCsvBtn" class="btn btn-secondary">Export CSV</button>
+        <button id="clearBtn" class="btn btn-danger">Clear All</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="stats-bar" id="statsBar"></div>
+
+  <main class="main">
+    <table class="findings-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Severity</th>
+          <th>Provider</th>
+          <th>Kind</th>
+          <th>Pattern</th>
+          <th>Match</th>
+          <th>Type</th>
+          <th>Domain</th>
+          <th>Source</th>
+          <th>Time</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="findingsBody"></tbody>
+    </table>
+    <div id="emptyState" class="empty-state" hidden>
+      <div class="empty-icon">&#128269;</div>
+      <p>No findings yet. Browse some pages and KeyFinder will passively scan for leaked secrets.</p>
+    </div>
+  </main>
+
+  <script src="js/results.js"></script>
+</body>
+</html>

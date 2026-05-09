@@ -1,0 +1,38 @@
+{
+  "name": "KeyFinder",
+  "description": "Passively discovers API keys, tokens, and secrets leaked in page scripts, DOM, network responses, and browser storage. Available for Chrome and Firefox.",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/patterns.js", "js/content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/interceptor.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "permissions": ["activeTab", "storage"]
+}

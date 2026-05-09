@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00000000000000000000001 /* KeyFinderSafariApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000011 /* KeyFinderSafariApp.swift */; };
+		A00000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000012 /* ContentView.swift */; };
+		A00000000000000000000003 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000013 /* SafariWebExtensionHandler.swift */; };
+		A00000000000000000000004 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000014 /* manifest.json */; };
+		A00000000000000000000005 /* KeyFinderSafari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A00000000000000000000022 /* KeyFinderSafari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A00000000000000000000031 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000091 /* popup.html */; };
+		A00000000000000000000032 /* results.html in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000092 /* results.html */; };
+		A00000000000000000000033 /* js in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000093 /* js */; };
+		A00000000000000000000034 /* css in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000094 /* css */; };
+		A00000000000000000000035 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000095 /* icons */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A00000000000000000000006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A00000000000000000000030 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A00000000000000000000042;
+			remoteInfo = "KeyFinderSafari Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A00000000000000000000007 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A00000000000000000000005 /* KeyFinderSafari Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A00000000000000000000010 /* KeyFinderSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyFinderSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00000000000000000000011 /* KeyFinderSafariApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyFinderSafariApp.swift; sourceTree = "<group>"; };
+		A00000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A00000000000000000000013 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		A00000000000000000000014 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		A00000000000000000000015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00000000000000000000016 /* KeyFinderSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyFinderSafari.entitlements; sourceTree = "<group>"; };
+		A00000000000000000000017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00000000000000000000018 /* KeyFinderSafariExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyFinderSafariExtension.entitlements; sourceTree = "<group>"; };
+		A00000000000000000000022 /* KeyFinderSafari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "KeyFinderSafari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00000000000000000000091 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		A00000000000000000000092 /* results.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = results.html; sourceTree = "<group>"; };
+		A00000000000000000000093 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		A00000000000000000000094 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		A00000000000000000000095 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00000000000000000000061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00000000000000000000064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00000000000000000000020 = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000024 /* KeyFinderSafari */,
+				A00000000000000000000025 /* KeyFinderSafariExtension */,
+				A00000000000000000000021 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A00000000000000000000021 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000010 /* KeyFinderSafari.app */,
+				A00000000000000000000022 /* KeyFinderSafari Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000024 /* KeyFinderSafari */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000011 /* KeyFinderSafariApp.swift */,
+				A00000000000000000000012 /* ContentView.swift */,
+				A00000000000000000000015 /* Info.plist */,
+				A00000000000000000000016 /* KeyFinderSafari.entitlements */,
+			);
+			path = KeyFinderSafari;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000025 /* KeyFinderSafariExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000013 /* SafariWebExtensionHandler.swift */,
+				A00000000000000000000090 /* Resources */,
+				A00000000000000000000017 /* Info.plist */,
+				A00000000000000000000018 /* KeyFinderSafariExtension.entitlements */,
+			);
+			path = KeyFinderSafariExtension;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000090 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000014 /* manifest.json */,
+				A00000000000000000000091 /* popup.html */,
+				A00000000000000000000092 /* results.html */,
+				A00000000000000000000093 /* js */,
+				A00000000000000000000094 /* css */,
+				A00000000000000000000095 /* icons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A00000000000000000000040 /* KeyFinderSafari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000050 /* Build configuration list for PBXNativeTarget "KeyFinderSafari" */;
+			buildPhases = (
+				A00000000000000000000060 /* Sources */,
+				A00000000000000000000061 /* Frameworks */,
+				A00000000000000000000062 /* Resources */,
+				A00000000000000000000007 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A00000000000000000000008 /* PBXTargetDependency */,
+			);
+			name = KeyFinderSafari;
+			productName = KeyFinderSafari;
+			productReference = A00000000000000000000010 /* KeyFinderSafari.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A00000000000000000000042 /* KeyFinderSafari Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000051 /* Build configuration list for PBXNativeTarget "KeyFinderSafari Extension" */;
+			buildPhases = (
+				A00000000000000000000063 /* Sources */,
+				A00000000000000000000064 /* Frameworks */,
+				A00000000000000000000065 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KeyFinderSafari Extension";
+			productName = "KeyFinderSafari Extension";
+			productReference = A00000000000000000000022 /* KeyFinderSafari Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00000000000000000000030 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					A00000000000000000000040 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					A00000000000000000000042 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = A00000000000000000000052 /* Build configuration list for PBXProject "KeyFinderSafari" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A00000000000000000000020;
+			productRefGroup = A00000000000000000000021 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A00000000000000000000040 /* KeyFinderSafari */,
+				A00000000000000000000042 /* KeyFinderSafari Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00000000000000000000062 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00000000000000000000065 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000004 /* manifest.json in Resources */,
+				A00000000000000000000031 /* popup.html in Resources */,
+				A00000000000000000000032 /* results.html in Resources */,
+				A00000000000000000000033 /* js in Resources */,
+				A00000000000000000000034 /* css in Resources */,
+				A00000000000000000000035 /* icons in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00000000000000000000060 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000001 /* KeyFinderSafariApp.swift in Sources */,
+				A00000000000000000000002 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00000000000000000000063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000003 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A00000000000000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A00000000000000000000042 /* KeyFinderSafari Extension */;
+			targetProxy = A00000000000000000000006 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A00000000000000000000070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A00000000000000000000071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		A00000000000000000000072 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeyFinderSafari/KeyFinderSafari.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 48S57XVT54;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = KeyFinderSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.KeyFinderSafari;
+				PRODUCT_NAME = KeyFinderSafari;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A00000000000000000000073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeyFinderSafari/KeyFinderSafari.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 48S57XVT54;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = KeyFinderSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.KeyFinderSafari;
+				PRODUCT_NAME = KeyFinderSafari;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A00000000000000000000074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KeyFinderSafariExtension/KeyFinderSafariExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48S57XVT54;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = KeyFinderSafariExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.KeyFinderSafari.Extension;
+				PRODUCT_NAME = "KeyFinderSafari Extension";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A00000000000000000000075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KeyFinderSafariExtension/KeyFinderSafariExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48S57XVT54;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = KeyFinderSafariExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.KeyFinderSafari.Extension;
+				PRODUCT_NAME = "KeyFinderSafari Extension";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00000000000000000000050 /* Build configuration list for PBXNativeTarget "KeyFinderSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000072 /* Debug */,
+				A00000000000000000000073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A00000000000000000000051 /* Build configuration list for PBXNativeTarget "KeyFinderSafari Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000074 /* Debug */,
+				A00000000000000000000075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A00000000000000000000052 /* Build configuration list for PBXProject "KeyFinderSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000070 /* Debug */,
+				A00000000000000000000071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A00000000000000000000030 /* Project object */;
+}

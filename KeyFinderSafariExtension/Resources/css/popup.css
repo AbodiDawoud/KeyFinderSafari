@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #0f0f0f;
+  color: #e0e0e0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.header {
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid #1e1e1e;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.header-brand h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.version {
+  font-size: 10px;
+  font-weight: 500;
+  color: #666;
+  background: #1a1a1a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.header-tagline {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #666;
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.toolbar-btn {
+  padding: 6px 12px;
+  background: #1a1a1a;
+  color: #d0d0d0;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toolbar-btn:hover {
+  background: #222;
+  border-color: #444;
+}
+
+.last-updated {
+  color: #666;
+  font-size: 11px;
+}
+
+.stat-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: #141414;
+  border-radius: 8px;
+  border: 1px solid #1e1e1e;
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.section {
+  padding: 12px 16px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+
+.keyword-form {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.keyword-form input {
+  flex: 1;
+  padding: 7px 10px;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.keyword-form input:focus {
+  border-color: #4a9eff;
+}
+
+.keyword-form input::placeholder {
+  color: #444;
+}
+
+.keyword-form button {
+  padding: 7px 14px;
+  background: #4a9eff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.keyword-form button:hover {
+  background: #3a8eef;
+}
+
+.error-msg {
+  padding: 6px 10px;
+  background: #2a1515;
+  border: 1px solid #4a2020;
+  border-radius: 6px;
+  color: #ff6b6b;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.keyword-list {
+  list-style: none;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.keyword-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.keyword-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.keyword-list::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.keyword-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.1s;
+}
+
+.keyword-item:hover {
+  background: #1a1a1a;
+}
+
+.keyword-label {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.keyword-remove {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.1s;
+}
+
+.keyword-remove:hover {
+  background: #2a1515;
+  color: #ff6b6b;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 16px;
+  color: #444;
+  font-size: 12px;
+}
+
+.footer {
+  padding: 12px 16px;
+  border-top: 1px solid #1e1e1e;
+}
+
+.results-btn {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #4a9eff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #1e2d4a;
+  transition: all 0.15s;
+}
+
+.results-btn:hover {
+  background: linear-gradient(135deg, #1e2040 0%, #1a2848 100%);
+  border-color: #2a4070;
+}
