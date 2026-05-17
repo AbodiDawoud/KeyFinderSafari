@@ -1,4 +1,7 @@
-# KeyFinder Safari Port
+# Safari Key Finder
+
+<img  alt="Screenshot 2026-05-17 at 1 39 21 AM" src="https://github.com/user-attachments/assets/91fe08ab-ace5-4bec-9931-784a34302f31" />
+
 
 This folder contains a macOS Safari Web Extension wrapper for the existing KeyFinder extension.
 
