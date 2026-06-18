@@ -1,54 +1,33 @@
-# Safari Key Finder
+# KeyFinderSafari
 
-<img  alt="Screenshot 2026-05-17 at 1 39 21 AM" src="https://github.com/user-attachments/assets/91fe08ab-ace5-4bec-9931-784a34302f31" />
+I built this as a Safari Web Extension version of KeyFinder.
 
+It passively scans pages for exposed API keys, tokens, secrets, and credential-like values. The scanner runs in JavaScript inside the extension. The Swift app is only the macOS container Safari needs so the extension can be installed, enabled, and managed.
 
-This folder contains a macOS Safari Web Extension wrapper for the existing KeyFinder extension.
+## What I Scan
 
-The scanner still runs as JavaScript. Safari loads `manifest.json`, injects the content scripts, runs the background script, and shows the popup/results pages from the extension bundle. The Swift code is the containing macOS app plus the Safari native extension handler that Safari requires for packaging.
+- Inline scripts and same-origin external scripts
+- Script URLs, links, and URL parameters
+- Meta tags, hidden inputs, data attributes, and HTML comments
+- Cookies, `localStorage`, and `sessionStorage`
+- Runtime response text seen by the injected interceptor
 
-## Project Layout
+Findings are stored locally with `chrome.storage.local` and shown through the extension popup/results UI.
 
-- `KeyFinderSafari.xcodeproj` - Xcode project with the macOS app and Safari Web Extension targets.
-- `KeyFinderSafari/` - Swift containing app that opens Safari extension settings and shows enabled status.
-- `KeyFinderSafariExtension/SafariWebExtensionHandler.swift` - Native message handler placeholder.
-- `KeyFinderSafariExtension/Resources/` - Copied web-extension resources from the root project.
+## Run It
 
-## Build
+Open `KeyFinderSafari.xcodeproj` in Xcode, set a signing team for both targets, build the app, then enable the extension in Safari Settings > Extensions.
+
+For an unsigned local build:
 
 ```sh
-xcodebuild -project KeyFinderSafari/KeyFinderSafari.xcodeproj -scheme KeyFinderSafari -configuration Debug -derivedDataPath KeyFinderSafari/build CODE_SIGNING_ALLOWED=NO build
+xcodebuild -project KeyFinderSafari.xcodeproj -scheme KeyFinderSafari -configuration Debug -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
 ```
 
-For local Safari testing from Xcode, use a normal signing team instead of `CODE_SIGNING_ALLOWED=NO`, then run the app and enable the extension in Safari Settings.
+Safari may still require a signed build for normal extension use. For temporary testing, enable Safari's Develop menu and allow unsigned extensions.
 
-## If the Extension Only Appears When Running from Xcode
+## Layout
 
-Safari discovers web extensions through the containing macOS app. Xcode can register a development build while it is running, but a normal app launch usually needs the app and embedded `.appex` to be signed with a valid Apple Development identity.
-
-For persistent local testing:
-
-1. In Xcode, select both `KeyFinderSafari` and `KeyFinderSafari Extension`.
-2. Open **Signing & Capabilities** for each target.
-3. Select your Apple development team.
-4. Use a unique bundle identifier instead of `com.local.KeyFinderSafari`.
-5. Build and run the app once, then open Safari Settings > Extensions.
-
-If you do not have a signing identity, enable Safari's Develop menu and use **Develop > Allow Unsigned Extensions** for temporary testing. Safari may require that setting again after restarting.
-
-## Updating the JavaScript Core
-
-If the root extension changes, copy the updated web resources into:
-
-```text
-KeyFinderSafari/KeyFinderSafariExtension/Resources/
-```
-
-The current port copied:
-
-- `manifest.json`
-- `popup.html`
-- `results.html`
-- `js/`
-- `css/`
-- `icons/`
+- `KeyFinderSafari/` - macOS container app.
+- `KeyFinderSafariExtension/` - Safari Web Extension target.
+- `KeyFinderSafariExtension/Resources/js/` - scanner, background worker, popup logic, and detection patterns.
