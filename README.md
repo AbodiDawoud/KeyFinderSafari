@@ -1,15 +1,18 @@
-# KeyFinderSafari
+# Key Finder Safari
 
-I built this as a Safari Web Extension version of KeyFinder.
+This tool is the Safari Web Extenstion version of [KeyFinder](https://github.com/momenbasel/keyfinder).
 
-It passively scans pages for exposed API keys, tokens, secrets, and credential-like values. The scanner runs in JavaScript inside the extension. The Swift app is only the macOS container Safari needs so the extension can be installed, enabled, and managed.
+The tool passively scans pages for exposed API keys, tokens, secrets, and credential-like values. The scanner runs in JavaScript inside the extension. The Swift app is only the macOS container Safari needs so the extension can be installed, enabled, and managed.
 
-## What I Scan
+<img  alt="Screenshot 2026-05-17 at 1 39 21 AM" src="https://github.com/user-attachments/assets/91fe08ab-ace5-4bec-9931-784a34302f31" />
 
-- Inline scripts and same-origin external scripts
-- Script URLs, links, and URL parameters
-- Meta tags, hidden inputs, data attributes, and HTML comments
+## What It Scan
+
+- API Keys and tokens
 - Cookies, `localStorage`, and `sessionStorage`
+- Script URLs, links, and URL parameters
+- Inline scripts and same-origin external scripts
+- Meta tags, hidden inputs, data attributes, and HTML comments
 - Runtime response text seen by the injected interceptor
 
 Findings are stored locally with `chrome.storage.local` and shown through the extension popup/results UI.
